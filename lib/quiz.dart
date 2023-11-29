@@ -11,17 +11,11 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   // we can store widget into variables bcs they are object at the end
-  late Widget? activeScreen;
-
-  @override
-  void initState() {
-    activeScreen = StartScreen(switchScreen);
-    super.initState();
-  }
+  var activeScreen = 'start-screen';
 
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestionScreen();
+      activeScreen = 'questions-screen';
     });
   }
 
@@ -41,9 +35,18 @@ class _QuizState extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: activeScreen,
+          child: activeScreen == 'start-screen'
+              ? StartScreen(switchScreen)
+              : const QuestionScreen(),
         ),
       ),
     );
   }
 }
+
+/*
+There are three extremely important (stateful) widget lifecycle methods you should be aware of:
+initState(): Executed by Flutter when the StatefulWidget's State object is initialized
+build(): Executed by Flutter when the Widget is built for the first time AND after setState() was called
+dispose(): Executed by Flutter right before the Widget will be deleted (e.g., because it was displayed conditionally)
+*/
