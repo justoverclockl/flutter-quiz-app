@@ -10,6 +10,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  final List<String> selectedAnswers = [];
   // we can store widget into variables bcs they are object at the end
   var activeScreen = 'start-screen';
 
@@ -19,11 +20,17 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget widgetToRender = activeScreen == 'start-screen'
         ? StartScreen(switchScreen)
-        : const QuestionScreen();
+        : QuestionScreen(
+            onSelectAnswer: chooseAnswer,
+          );
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
