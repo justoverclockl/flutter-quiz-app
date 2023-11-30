@@ -2,54 +2,54 @@ import 'package:quiz_app/models/quiz_questions.dart';
 
 const questions = [
   QuizQuestion(
-    'What are the main building blocks of Flutter UIs?',
+    'Quali sono i principali blocchi di costruzione delle UI di Flutter?',
     [
-      'Widgets',
-      'Components',
-      'Blocks',
-      'Functions',
+      'Widget',
+      'Componenti',
+      'Blocchi',
+      'Funzioni',
     ],
   ),
-  QuizQuestion('How are Flutter UIs built?', [
-    'By combining widgets in code',
-    'By combining widgets in a visual editor',
-    'By defining widgets in config files',
-    'By using XCode for iOS and Android Studio for Android',
+  QuizQuestion('Come vengono costruite le UI di Flutter?', [
+    'Combinando widget nel codice',
+    'Combinando widget in un editor visuale',
+    'Definendo widget nei file di configurazione',
+    'Utilizzando XCode per iOS e Android Studio per Android',
   ]),
   QuizQuestion(
-    'What\'s the purpose of a StatefulWidget?',
+    'Qual è lo scopo di un StatefulWidget?',
     [
-      'Update UI as data changes',
-      'Update data as UI changes',
-      'Ignore data changes',
-      'Render UI that does not depend on data',
+      'Aggiornare la UI quando i dati cambiano',
+      'Aggiornare i dati quando la UI cambia',
+      'Ignorare i cambiamenti nei dati',
+      'Rendere la UI indipendente dai dati',
     ],
   ),
   QuizQuestion(
-    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
+    'Quale widget dovresti cercare di utilizzare più spesso: StatelessWidget o StatefulWidget?',
     [
       'StatelessWidget',
       'StatefulWidget',
-      'Both are equally good',
-      'None of the above',
+      'Entrambi sono ugualmente buoni',
+      'Nessuna delle opzioni precedenti',
     ],
   ),
   QuizQuestion(
-    'What happens if you change data in a StatelessWidget?',
+    'Cosa succede se si modificano i dati in un StatelessWidget?',
     [
-      'The UI is not updated',
-      'The UI is updated',
-      'The closest StatefulWidget is updated',
-      'Any nested StatefulWidgets are updated',
+      'La UI non viene aggiornata',
+      'La UI viene aggiornata',
+      'Viene aggiornato il StatefulWidget più vicino',
+      'Vengono aggiornati gli StatefulWidget nidificati',
     ],
   ),
   QuizQuestion(
-    'How should you update data inside of StatefulWidgets?',
+    'Come dovresti aggiornare i dati all\'interno degli StatefulWidgets?',
     [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
+      'Chiamando setState()',
+      'Chiamando updateData()',
+      'Chiamando updateUI()',
+      'Chiamando updateState()',
     ],
   ),
 ];
