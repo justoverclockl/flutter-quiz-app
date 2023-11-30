@@ -13,7 +13,7 @@ class ResultsScreen extends StatelessWidget {
   final void Function() onRestart;
   final List<String> chosenAnswers;
 
-  List<Map<String, Object>> getSummaryData() {
+  List<Map<String, Object>> get summaryData {
     final List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chosenAnswers.length; i++) {
@@ -31,7 +31,7 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // we do not call this function twice, simply store it in a variable and re-use it
-    final summaryData = getSummaryData();
+    //final summaryData = summaryData;
     final numTotalQuestion = questions.length;
     final numCorrectQuestions = summaryData
         .where((element) => element['user_answer'] == element['correct_answer'])
